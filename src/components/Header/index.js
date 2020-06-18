@@ -16,7 +16,7 @@ function Header() {
                     <S.IconWhatsapp />
                     <span>
                         <p>0800 123 2222</p>
-                        <p>Envie mensagem ou lique</p>
+                        <p className='msg'>Envie mensagem ou lique</p>
                     </span>
                 </S.Info>
             </S.InfoWrapper>

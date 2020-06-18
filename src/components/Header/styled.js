@@ -17,6 +17,12 @@ export const Header = styled.header`
         font-size: 14px;
         margin-left: 5px;
         margin-right: 10px;
+        line-height: 1.6;
+    }
+
+    .msg {
+        font-size: 12px;
+        font-weight: 700;
     }
 `
 
@@ -34,7 +40,7 @@ export const Info = styled.div`
 
     &:first-child {
         padding-right: 30px;
-        border-right: 1px solid #ccc;
+        border-right: 2px solid #e6e6e6;
         margin-right: 30px;
     }
 `
