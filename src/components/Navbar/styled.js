@@ -7,7 +7,6 @@ export const NavbarWrapper = styled.div`
 export const Navbar = styled.nav`
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 1rem;
     padding-right: 1rem;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 `
@@ -31,7 +30,7 @@ export const NavbarItem = styled.li`
 
 export const NavbarItemLink = styled.a`
     display: inline-block;
-    padding: 1rem 2.25rem;
+    padding: 1rem;
     transition: background-color 0.3s;
     &:hover {
         background-color: var(--blue-secondary);
