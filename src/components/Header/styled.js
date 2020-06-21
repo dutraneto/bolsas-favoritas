@@ -1,7 +1,4 @@
 import styled from 'styled-components'
-import { InfoCircle } from '@styled-icons/boxicons-regular/InfoCircle'
-import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
-import { UserCircle } from '@styled-icons/boxicons-regular/UserCircle'
 
 export const Header = styled.header`
     max-width: 1440px;
@@ -43,6 +40,10 @@ export const Info = styled.div`
         border-right: 2px solid #e6e6e6;
         margin-right: 30px;
     }
+
+    .color-green {
+        fill: var(--green) !important;
+    }
 `
 
 export const ImgWrapper = styled.figure`
@@ -59,20 +60,4 @@ export const UserWrapper = styled.div`
     align-items: center;
     width: calc(100% / 3);
     justify-content: flex-end;
-`
-
-export const IconInfo = styled(InfoCircle)`
-    width: 30px;
-    height: 30px;
-    fill: var(--blue-secondary);
-`
-export const IconWhatsapp = styled(Whatsapp)`
-    width: 30px;
-    height: 30px;
-    fill: var(--green);
-`
-export const IconUser = styled(UserCircle)`
-    width: 30px;
-    height: 30px;
-    fill: var(--blue-secondary);
 `

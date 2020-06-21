@@ -1,19 +1,24 @@
 import React from 'react'
 
 import * as S from './styled'
+import * as Icon from '../Icons/styled'
 import Logo from '../../static/images/logo-querobolsa.svg'
 
 function Header() {
-    // console.log(InfoCircle)
+    const iconStyle = {
+        color: '#007A8D',
+        width: '30px',
+        height: '30px',
+    }
     return (
         <S.Header>
             <S.InfoWrapper>
                 <S.Info>
-                    <S.IconInfo />
+                    <Icon.IconInfo iconStyle={iconStyle} />
                     <p>Como funciona</p>
                 </S.Info>
                 <S.Info>
-                    <S.IconWhatsapp />
+                    <Icon.IconWhatsapp iconStyle={iconStyle} className='color-green' />
                     <span>
                         <p>0800 123 2222</p>
                         <p className='msg'>Envie mensagem ou lique</p>
@@ -21,12 +26,12 @@ function Header() {
                 </S.Info>
             </S.InfoWrapper>
             <S.ImgWrapper>
-                <img src={Logo} />
+                <img src={Logo} alt='Logo' />
             </S.ImgWrapper>
 
             <S.UserWrapper>
                 <p>John Doe</p>
-                <S.IconUser />
+                <Icon.IconUser iconStyle={iconStyle} />
             </S.UserWrapper>
         </S.Header>
     )

@@ -64,6 +64,11 @@ const GlobalStyles = createGlobalStyle`
         border-spacing: 0;
     }
 
+    .msg {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
 `
 
 export default GlobalStyles
