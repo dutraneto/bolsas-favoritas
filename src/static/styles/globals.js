@@ -64,6 +64,13 @@ const GlobalStyles = createGlobalStyle`
         border-spacing: 0;
     }
 
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .msg {
         font-size: 12px;
         font-weight: 700;

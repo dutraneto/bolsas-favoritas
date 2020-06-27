@@ -4,6 +4,7 @@ import * as S from './styled'
 
 import Header from '../Header'
 import Navbar from '../Navbar'
+import Main from '../Main'
 import Footer from '../Footer'
 
 const Layout = (props) => {
@@ -13,6 +14,7 @@ const Layout = (props) => {
         <S.LayoutWrapper>
             <Header />
             <Navbar />
+            <Main />
             <Footer />
         </S.LayoutWrapper>
     )

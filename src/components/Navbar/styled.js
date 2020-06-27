@@ -5,9 +5,6 @@ export const NavbarWrapper = styled.div`
 `
 
 export const Navbar = styled.nav`
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-right: 1rem;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 `
 

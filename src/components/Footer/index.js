@@ -11,7 +11,7 @@ const Footer = (props) => {
     }
     return (
         <S.Footer>
-            <S.ContactWrapper>
+            <S.ContactWrapper className='container'>
                 <S.ContactItemWrapper>
                     <S.ContactItem href='/'>
                         <Icon.IconWhatsapp iconStyle={iconStyle} />

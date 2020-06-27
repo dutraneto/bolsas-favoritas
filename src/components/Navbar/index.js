@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <S.NavbarWrapper>
             <S.Navbar>
-                <S.NavbarList>
+                <S.NavbarList className='container'>
                     <S.NavbarItem>
                         <S.NavbarItemLink>Minha conta</S.NavbarItemLink>
                     </S.NavbarItem>

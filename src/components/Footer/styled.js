@@ -4,7 +4,7 @@ export const Footer = styled.footer`
     position: relative;
     width: 100%;
     height: 300px;
-    background: var(--blue-primary);
+    background: var(--blue-secondary);
     bottom: 0;
     left: 0;
 `
@@ -14,7 +14,6 @@ export const ContactWrapper = styled.ul`
     justify-content: space-between;
     align-items: center;
     height: 150px;
-    padding: 0 1rem;
     margin: 0 auto;
     background: var(--blue-secondary);
 `
@@ -37,6 +36,7 @@ export const CreditsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--blue-primary);
 `
 
 export const Credits = styled.p`

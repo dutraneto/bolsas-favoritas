@@ -11,7 +11,7 @@ function Header() {
         height: '30px',
     }
     return (
-        <S.Header>
+        <S.Header className='container'>
             <S.InfoWrapper>
                 <S.Info>
                     <Icon.IconInfo iconStyle={iconStyle} />
