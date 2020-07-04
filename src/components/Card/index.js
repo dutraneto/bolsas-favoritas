@@ -14,9 +14,9 @@ const Card = (props) => {
     return (
         <S.CardWrapper>
             <S.CardAdd>
-                <button>
+                <a href="#popup">
                     <IconAdd iconStyle={iconStyle} title='Clique para adicionar bolsas' />
-                </button>
+                </a>
                 <div>
                     <h3>Adicionar bolsa</h3>
                     <p>Clique para adicionar bolsas e cursos de seu interesse</p>

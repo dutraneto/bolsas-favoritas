@@ -5,6 +5,7 @@ import * as S from './styled'
 import Breadcrumb from '../Breadcrumb'
 import NavbarTerm from '../NavbarTerm'
 import CardList from '../CardList'
+import Popup from '../Popup'
 
 const Main = (props) => {
     return (
@@ -19,6 +20,7 @@ const Main = (props) => {
             </section>
             <NavbarTerm />
             <CardList />
+            <Popup />
         </S.Main>
     )
 }
