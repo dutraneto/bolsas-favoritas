@@ -7,7 +7,8 @@ import NavbarTerm from '../NavbarTerm'
 import CardList from '../CardList'
 import Popup from '../Popup'
 
-const Main = (props) => {
+const Main = ({ data }) => {
+    console.log(data)
     return (
         <S.Main className='container'>
             <Breadcrumb />
@@ -20,7 +21,7 @@ const Main = (props) => {
             </section>
             <NavbarTerm />
             <CardList />
-            <Popup />
+            <Popup data={data} />
         </S.Main>
     )
 }
