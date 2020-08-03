@@ -2,9 +2,11 @@ import React from 'react'
 
 import * as S from './styled'
 import { IconClose } from '../Icons/styled'
-import Anhanguera from '../../static/images/anhanguera.png'
 
 const Popup = ({ data }) => {
+    const cities = [...new Set(data.map((item, index) => item.campus.city))].sort()
+    const courses = [...new Set(data.map((item, index) => item.course.name))].sort()
+
     return (
         <S.PopupWrapper id='popup'>
             <div className='content'>
@@ -22,10 +24,11 @@ const Popup = ({ data }) => {
                                 <S.Selector>
                                     <S.Label htmlFor='selectCity'>Selecione sua cidade</S.Label>
                                     <select name='' id='selectCity'>
-                                        <option value=''>1</option>
-                                        {data.map((item, index) => {
-                                            return <option value=''>{item.campus.city}</option>
-                                        })}
+                                        {cities.map((city, index) => (
+                                            <option key={index} value={city}>
+                                                {city}
+                                            </option>
+                                        ))}
                                     </select>
                                 </S.Selector>
 
@@ -34,10 +37,11 @@ const Popup = ({ data }) => {
                                         Selecione o curso de sua preferência
                                     </S.Label>
                                     <select name='' id='selectCourse'>
-                                        <option value=''>1</option>
-                                        <option value=''>2</option>
-                                        <option value=''>3</option>
-                                        <option value=''>4</option>
+                                        {courses.map((course, index) => (
+                                            <option key={index} value={course}>
+                                                {course}
+                                            </option>
+                                        ))}
                                     </select>
                                 </S.Selector>
                             </S.SelectorWrapper>
@@ -83,60 +87,27 @@ const Popup = ({ data }) => {
                             </S.ResultLabel>
                         </S.ResultFilterWrapper>
                         <S.ResultList>
-                            <S.Result>
-                                <S.ResultProgram>
-                                    <input type='checkbox' name='' id='' />
-                                    <S.ResultImg src={Anhanguera} alt='' />
-                                    <div>
-                                        <h5>Administração</h5>
-                                        <p>Bacharelado</p>
-                                    </div>
-                                </S.ResultProgram>
-                                <S.ResultValue>
-                                    <p>
-                                        Bolsa de <span>50%</span>
-                                    </p>
-                                    <p>
-                                        R$ <span>374</span>/mês
-                                    </p>
-                                </S.ResultValue>
-                            </S.Result>
-                            <S.Result>
-                                <S.ResultProgram>
-                                    <input type='checkbox' name='' id='' />
-                                    <S.ResultImg src={Anhanguera} alt='' />
-                                    <div>
-                                        <h5>Administração</h5>
-                                        <p>Bacharelado</p>
-                                    </div>
-                                </S.ResultProgram>
-                                <S.ResultValue>
-                                    <p>
-                                        Bolsa de <span>50%</span>
-                                    </p>
-                                    <p>
-                                        R$ <span>374</span>/mês
-                                    </p>
-                                </S.ResultValue>
-                            </S.Result>
-                            <S.Result>
-                                <S.ResultProgram>
-                                    <input type='checkbox' name='' id='' />
-                                    <S.ResultImg src={Anhanguera} alt='' />
-                                    <div>
-                                        <h5>Administração</h5>
-                                        <p>Bacharelado</p>
-                                    </div>
-                                </S.ResultProgram>
-                                <S.ResultValue>
-                                    <p>
-                                        Bolsa de <span>50%</span>
-                                    </p>
-                                    <p>
-                                        R$ <span>374</span>/mês
-                                    </p>
-                                </S.ResultValue>
-                            </S.Result>
+                            {data.map((item, index) => (
+                                <S.Result key={index}>
+                                    {console.log(item.university.logo_url)}
+                                    <S.ResultProgram>
+                                        <input type='checkbox' name='' id='' />
+                                        <S.ResultImg src={item.university.logo_url} alt='' />
+                                        <div>
+                                            <h5>{item.course.name}</h5>
+                                            <p>{item.course.level}</p>
+                                        </div>
+                                    </S.ResultProgram>
+                                    <S.ResultValue>
+                                        <p>
+                                            Bolsa de <span>{item.discount_percentage}%</span>
+                                        </p>
+                                        <p>
+                                            <span>R$ {item.price_with_discount}/mês</span>
+                                        </p>
+                                    </S.ResultValue>
+                                </S.Result>
+                            ))}
                         </S.ResultList>
                     </S.ResultWrapper>
                     <S.ButtonWrapper>

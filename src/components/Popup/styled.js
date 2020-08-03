@@ -184,7 +184,7 @@ export const ResultProgram = styled.div`
 `
 
 export const ResultImg = styled.img`
-    width: 60px;
+    width: 100px;
     height: auto;
     margin: 0 2rem;
 `

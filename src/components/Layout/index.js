@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { v1 as uuidv1 } from 'uuid'
 
 import * as S from './styled'
 
@@ -12,17 +13,19 @@ const Layout = (props) => {
     // Hooks here
     const [URL] = useState(`https://testapi.io/api/dutraneto/bolsas`)
     const [data, setData] = useState([])
+
     // Request endpoint
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const getData = await axios.get(URL)
-                const getArrayData = getData.data.map((course, index) => {
+                const getArrayData = getData.data.map((course) => {
+                    course.id = uuidv1()
                     return course
                 })
                 setData(getArrayData)
             } catch (error) {
-                console.log('Could Not get request found')
+                console.log('Could not get requested data')
             }
         }
         fetchData()
